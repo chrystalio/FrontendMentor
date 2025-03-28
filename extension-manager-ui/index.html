@@ -4,26 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
 
   <title>Frontend Mentor | Browser extensions manager UI</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body>
-
-  Extensions List
-
-  All
-  Active
-  Inactive
+<body class="mx-4 my-6 lg:mx-24 lg:my-10">
+    <header class="bg-white rounded-xl py-2 px-3 mb-8 lg:mb-14 shadow-sm">
+        <div class="flex justify-between items-center">
+            <div><img src="assets/images/logo.svg" alt=""></div>
+            <div>
+                <button class="rounded-xl bg-slate-100 p-2.5 border border-transparent text-center text-sm text-white transition-all hover:shadow-lg focus:bg-slate-400 focus:shadow-none active:bg-slate-700 hover:bg-slate-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                    <img src="assets/images/icon-moon.svg" alt="" srcset="">
+                  </button>
+            </div>
+        </div>
+    </header>
+    <div class="lg:flex lg:justify-between mb-10 text-center">
+        <h1 class="text-3xl font-bold text-[#091540]">Extensions List</h1>
+        <div class="flex justify-center gap-4 my-5 mx-4 lg:my-0 items-center">
+            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-[#de473f] text-white shadow-sm">All</div>
+            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Active</div>
+            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Inactive</div>
+        </div>
+    </div>
 
   <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
 
-  DevLens
+  <!-- DevLens
   Quickly inspect page layouts and visualize element boundaries.
   Remove
 
@@ -69,7 +81,7 @@
 
   ConsolePlus
   Enhanced developer console with advanced filtering and logging.
-  Remove
+  Remove -->
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
