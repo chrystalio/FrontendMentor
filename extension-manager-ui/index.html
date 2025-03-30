@@ -19,19 +19,42 @@
             <div><img src="assets/images/logo.svg" alt=""></div>
             <div>
                 <button class="rounded-xl bg-slate-100 p-2.5 border border-transparent text-center text-sm text-white transition-all hover:shadow-lg focus:bg-slate-400 focus:shadow-none active:bg-slate-700 hover:bg-slate-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                    <img src="assets/images/icon-moon.svg" alt="" srcset="">
+                    <img src="assets/images/icon-moon.svg" alt="moon-icon" class="">
                   </button>
             </div>
         </div>
     </header>
-    <div class="lg:flex lg:justify-between mb-10 text-center">
-        <h1 class="text-3xl font-bold text-[#091540]">Extensions List</h1>
-        <div class="flex justify-center gap-4 my-5 mx-4 lg:my-0 items-center">
-            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-[#de473f] text-white shadow-sm">All</div>
-            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Active</div>
-            <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Inactive</div>
+    <main>
+        <div class="lg:flex lg:justify-between mb-10 text-center">
+            <h1 class="text-3xl font-bold text-[#091540]">Extensions List</h1>
+            <div class="flex justify-center gap-4 my-5 mx-4 lg:my-0 items-center">
+                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-[#de473f] text-white shadow-sm">All</div>
+                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Active</div>
+                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Inactive</div>
+            </div>
         </div>
-    </div>
+        <div id="extensions" class="lg:flex text-[#091540] mb-3">
+            <div class="bg-white rounded-xl px-3 py-2 mb-2 shadow-sm">
+               <div class="flex">
+                    <div class="me-3 pt-1">
+                        <img src="assets/images/logo-devlens.svg" alt="" class="w-20">
+                    </div>
+                    <div>
+                        <p class="text-lg font-bold ">DevLens</p>
+                        <p class="text-sm py-1">Quickly inspect page layouts and visualize element boundaries.</p>
+                    </div>
+               </div>
+               <div class="pt-4 pb-3 flex justify-between items-center">
+                <div class="rounded-2xl border border-slate-300 py-1 px-3 text-sm">Remove</div>
+                <label class="relative inline-flex items-center cursor-pointer w-9 h-5">
+                  <input type="checkbox" class="sr-only peer">
+                  <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-red-600 transition-colors duration-300"></div>
+                  <div class="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-[1rem]"></div>
+                </label>
+              </div>
+            </div>
+        </div>
+    </main>
 
   <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
 
@@ -83,10 +106,10 @@
   Enhanced developer console with advanced filtering and logging.
   Remove -->
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Chrystalio (Kristoff)</a>.
-  </div>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </body>
 </html>
