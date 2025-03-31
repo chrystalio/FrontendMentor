@@ -1,9 +1,12 @@
+
+let allExtensions = [];
+
 fetch('data.json')
     .then(res => res.json())
     .then(data => {
-        renderData(data);
+        allExtensions = data;
+        renderData(allExtensions);
     });
-
 
 const renderData = (extensions) => {
     const container = document.getElementById('extensions');
@@ -36,3 +39,33 @@ const renderData = (extensions) => {
       container.appendChild(card);
     })
 }
+
+const filterExtensions = (type) => {
+    let filtered = [];
+
+    if (type === 'active') {
+        filtered = allExtensions.filter(ext => ext.isActive);
+    } else if (type === 'inactive') {
+        filtered = allExtensions.filter(ext => !ext.isActive);
+    } else {
+        filtered = allExtensions;
+    }
+
+    renderData(filtered);
+}
+
+document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-[#C7221A]', 'text-white');
+            b.classList.add('bg-white', 'text-[#091540]');
+        });
+
+        btn.classList.remove('bg-white', 'text-[#091540]');
+        btn.classList.add('bg-[#C7221A]', 'text-white');
+
+        const type = btn.getAttribute('data-filter');
+        filterExtensions(type);
+    });
+});
