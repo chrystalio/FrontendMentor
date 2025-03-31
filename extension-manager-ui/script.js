@@ -23,7 +23,7 @@ const renderData = (extensions) => {
             <p class="text-sm py-1">${ext.description}</p>
           </div>
         </div>
-        <div class="pt-10 flex justify-between items-center">
+        <div class="pt-6 lg:pt-10 flex justify-between items-center">
           <div class="rounded-2xl border border-slate-300 py-1 px-3 text-sm">Remove</div>
           <label class="relative inline-flex items-center cursor-pointer w-9 h-5">
             <input type="checkbox" class="sr-only peer" ${ext.isActive ? 'checked' : ''}>
