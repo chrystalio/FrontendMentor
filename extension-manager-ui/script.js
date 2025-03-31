@@ -5,7 +5,19 @@ fetch('data.json')
     .then(res => res.json())
     .then(data => {
         allExtensions = data;
-        renderData(allExtensions);
+
+        const savedFilter = localStorage.getItem('selectedFilter') || 'all';
+        filterExtensions(savedFilter);
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            const type = btn.getAttribute('data-filter');
+            if (type === savedFilter) {
+              btn.classList.remove('bg-white', 'text-[#091540]');
+              btn.classList.add('bg-[#C7221A]', 'text-white');
+            } else {
+              btn.classList.remove('bg-[#C7221A]', 'text-white');
+              btn.classList.add('bg-white', 'text-[#091540]');
+            }
+          });
     });
 
 const renderData = (extensions) => {
@@ -66,6 +78,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
         btn.classList.add('bg-[#C7221A]', 'text-white');
 
         const type = btn.getAttribute('data-filter');
+        localStorage.setItem('selectedFilter', type);
         filterExtensions(type);
     });
 });
