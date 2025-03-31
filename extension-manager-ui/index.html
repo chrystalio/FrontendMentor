@@ -1,115 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
 
-  <title>Frontend Mentor | Browser extensions manager UI</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Browser extensions manager UI</title>
 </head>
-<body class="mx-4 my-6 lg:mx-24 lg:my-10">
+
+<body id="mainBody"
+    class="mx-4 my-6 lg:mx-82 lg:my-8 bg-gradient-light bg-no-repeat min-h-screen transition-all text-[#091540]">
     <header class="bg-white rounded-xl py-2 px-3 mb-8 lg:mb-14 shadow-sm">
         <div class="flex justify-between items-center">
             <div><img src="assets/images/logo.svg" alt=""></div>
             <div>
-                <button class="rounded-xl bg-slate-100 p-2.5 border border-transparent text-center text-sm text-white transition-all hover:shadow-lg focus:bg-slate-400 focus:shadow-none active:bg-slate-700 hover:bg-slate-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
-                    <img src="assets/images/icon-moon.svg" alt="moon-icon" class="">
-                  </button>
+                <button id="themeToggle"
+                    class="rounded-xl bg-slate-100 p-2.5 border border-transparent text-center text-sm text-white transition-all focus:border-[#C7221A] focus:shadow-none active:bg-slate-100 hover:bg-[#C6C6C3] active:shadow-none cursor-pointer"
+                    type="button">
+                    <img id="moonIcon" src="assets/images/icon-moon.svg" alt="moon-icon" class="">
+                    <img id="sunIcon" src="assets/images/icon-sun.svg" alt="sun-icon" class="hidden">
+                </button>
             </div>
         </div>
     </header>
     <main>
-        <div class="lg:flex lg:justify-between mb-10 text-center">
+        <div class="lg:flex lg:justify-between mb-5 lg:mb-8 text-center">
             <h1 class="text-3xl font-bold text-[#091540]">Extensions List</h1>
             <div class="flex justify-center gap-4 my-5 mx-4 lg:my-0 items-center">
-                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-[#de473f] text-white shadow-sm">All</div>
-                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Active</div>
-                <div class="rounded-2xl px-3 py-1 lg:px-3 bg-white text-[#091540] shadow-sm">Inactive</div>
+                <div class="rounded-3xl px-5 py-2 lg:px-4 lg:py-2 bg-[#C7221A] text-white shadow-sm focus:border-[#de473f]">All</div>
+                <div class="rounded-3xl px-5 py-2 lg:px-4 lg:py-2 bg-white text-[#091540] shadow-sm">Active</div>
+                <div class="rounded-3xl px-5 py-2 lg:px-4 lg:py-2 bg-white text-[#091540] shadow-sm">Inactive</div>
             </div>
         </div>
-        <div id="extensions" class="lg:flex text-[#091540] mb-3">
-            <div class="bg-white rounded-xl px-3 py-2 mb-2 shadow-sm">
-               <div class="flex">
-                    <div class="me-3 pt-1">
-                        <img src="assets/images/logo-devlens.svg" alt="" class="w-20">
-                    </div>
-                    <div>
-                        <p class="text-lg font-bold ">DevLens</p>
-                        <p class="text-sm py-1">Quickly inspect page layouts and visualize element boundaries.</p>
-                    </div>
-               </div>
-               <div class="pt-4 pb-3 flex justify-between items-center">
-                <div class="rounded-2xl border border-slate-300 py-1 px-3 text-sm">Remove</div>
-                <label class="relative inline-flex items-center cursor-pointer w-9 h-5">
-                  <input type="checkbox" class="sr-only peer">
-                  <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-red-600 transition-colors duration-300"></div>
-                  <div class="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all duration-300 peer-checked:translate-x-[1rem]"></div>
-                </label>
-              </div>
-            </div>
-        </div>
+        <div id="extensions" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-[#091540] mb-6">
     </main>
 
-  <!-- If you plan to use the JSON file to populate the data dynamically, you can delete the content below -->
-
-  <!-- DevLens
-  Quickly inspect page layouts and visualize element boundaries.
-  Remove
-
-  StyleSpy
-  Instantly analyze and copy CSS from any webpage element.
-  Remove
-
-  SpeedBoost
-  Optimizes browser resource usage to accelerate page loading.
-  Remove
-
-  JSONWizard
-  Formats, validates, and prettifies JSON responses in-browser.
-  Remove
-
-  TabMaster Pro
-  Organizes browser tabs into groups and sessions.
-  Remove
-
-  ViewportBuddy
-  Simulates various screen resolutions directly within the browser.
-  Remove
-
-  Markup Notes
-  Enables annotation and notes directly onto webpages for collaborative debugging.
-  Remove
-
-  GridGuides
-  Overlay customizable grids and alignment guides on any webpage.
-  Remove
-
-  Palette Picker
-  Instantly extracts color palettes from any webpage.
-  Remove
-
-  LinkChecker
-  Scans and highlights broken links on any page.
-  Remove
-
-  DOM Snapshot
-  Capture and export DOM structures quickly.
-  Remove
-
-  ConsolePlus
-  Enhanced developer console with advanced filtering and logging.
-  Remove -->
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-    Coded by <a href="#">Chrystalio (Kristoff)</a>.
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Chrystalio (Kristoff)</a>.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
