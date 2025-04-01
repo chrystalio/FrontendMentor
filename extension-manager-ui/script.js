@@ -39,7 +39,7 @@ const renderData = (extensions) => {
           </div>
         </div>
         <div class="pt-6 lg:pt-10 flex justify-between items-center">
-          <div class="rounded-2xl border border-slate-300 py-1 px-3 text-sm">Remove</div>
+          <div class="rounded-2xl border border-slate-300 py-1 px-3 text-sm hover:bg-[#C7221A] hover:text-white transition transition-colors duration-300 ease-in-out cursor-pointer">Remove</div>
           <label class="relative inline-flex items-center cursor-pointer w-9 h-5">
             <input type="checkbox" class="sr-only peer" ${ext.isActive ? 'checked' : ''}>
             <div class="w-full h-full bg-gray-300 rounded-full peer-checked:bg-[#C7221A] transition-colors duration-300"></div>
